@@ -1,0 +1,27 @@
+/*EMPRESA OFRECE UN BONO DE PRODUCTIVIDAD A SUS TRABAJADORES, DEPENDIENDO DEL NÚMERO DE UNIDADES PRODUCIDAS
+EN UN MES. SI SE PRODUCEN MÁS DE 100 UNIDADES, SE OTORGA UN BONO DEL 5% DEL SALARIO. SI SE PRODUCEN MÁS DE 200 UNIDADES,
+SE OTORGA UN BONO DEL 10% DEL SALARIO. SI SE PRODUCEN MENOS DE 100 UNIDADES, NO HAY BONO. ESCRIBE UN PROGRAMA QUE
+CALCULE EL BONO A OTORGAR Y MUESTRE EL SALARIO TOTAL A RECIBIR.
+*/
+
+Ejercicio 2.
+const unidades1= 100;
+const unidades2= 200;
+const bono1 = 0.5;
+const bono2 = 0.10; 
+ 
+
+const salario = parseInt(prompt("¿Cuanto es el salario que reciben?"));
+
+const producidas = parseInt(prompt ("¿Cuantas unidades fueron producidas este mes?"));
+
+
+const descuento1 = unidades1 * bono1;
+const descuento2 = unidades2 * bono2;
+if (producidas >= unidades1 ) {
+    alert(`El bono es de: ${descuento1 * salario}`);
+}else if(producidas >= unidades2) {
+    alert(`El bono es de: ${descuento2 * salario}`);
+}else {
+     alert("No hay bono");
+}
