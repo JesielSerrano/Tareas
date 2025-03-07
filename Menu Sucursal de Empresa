@@ -1,0 +1,97 @@
+let opcionSeleccionada = prompt (`
+
+---Bienvenidos a la Empresa TUTTO---
+
+1. Registro de Ventas
+2. Conversión de Divisas 
+3. Cálculo de Interéses
+4. Salir del programa de la Empresa
+`)
+
+do{
+switch(opcionSeleccionada){
+    case '1': 
+    const precio = Number(prompt('Ingrese el precio del producto: Q '))
+    const cantidad = Number(prompt('Ingrese la cantidad del producto: Q '))
+    const TotalVentas = precio * cantidad 
+    alert (`El total de ventas es de: Q${TotalVentas}`)
+
+    break
+
+    case '2': 
+    let opcionSeleccionada1 = prompt (`
+
+¿Que tipo conversión desea hacer?
+
+1. Dólares a quetzales 
+2. Euros a quetzales
+3. Regresar
+
+`)
+do{
+switch(opcionSeleccionada1){
+    case '1': 
+    const monto = Number(prompt('Ingrese la moneda inicial:  '))
+    const TipoCambio = 7.75
+    const TotalCambio = monto * TipoCambio 
+    alert (`El resultao es de: Q${TotalCambio}`)
+
+    break
+
+    case '2': 
+    const monto1 = Number(prompt('Ingrese la moneda inicial:  '))
+    const TipoCambio1 = 8.50
+    const TotalCambio1 = monto1 * TipoCambio1 
+    alert (`El resultao es de: Q${TotalCambio1}`)
+
+    break
+default: 
+        ('Opcion Incorrecta')
+        break 
+
+}
+    if(opcionSeleccionada1 !== '3') 
+        opcionSeleccionada1 = prompt (`
+
+¿Que tipo conversión desea hacer?
+
+1. Dólares a quetzales 
+2. Euros a quetzales
+3. Regresar
+
+`)
+}while(opcionSeleccionada1 !== '3')
+
+    break
+
+    case '3': 
+    const precioStand = 300
+            const tasaMora = 0.02
+            const diasGracia = 2
+
+            const cantidadStands = Number(prompt('Ingrese la cantidad de stands solicitados: '))
+            const diasRetraso = Number(prompt('Ingrese los días de retraso: '))
+
+            let montoStandConMora = diasRetraso > diasGracia ? precioStand * Math.pow(1 + tasaMora, diasRetraso - diasGracia) : precioStand
+            let montoTotal = montoStandConMora * cantidadStands
+
+            alert(`El monto total a pagar es: Q${montoTotal.toFixed(2)}`)
+            break
+
+    default: 
+        ('Opcion Incorrecta')
+        break 
+
+}
+    if(opcionSeleccionada !== '4') 
+        opcionSeleccionada = prompt (`
+
+---Bienvenidos a la Empresa TUTTO---
+
+1. Registro de Ventas
+2. Conversión de Divisas 
+3. Cálculo de Interéses
+4. Salir del programa de la Empresa
+`)
+    
+}while(opcionSeleccionada !== '4')
